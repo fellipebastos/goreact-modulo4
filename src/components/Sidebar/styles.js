@@ -18,16 +18,29 @@ export const Container = styled.aside`
 export const Nav = styled.ul`
   list-style: none;
 
+  &:not(:first-child) {
+    margin-top: 25px;
+  }
+
   li {
     a {
       color: inherit;
       text-decoration: none;
       font-size: 13px;
       line-height: 32px;
+      font-weight: ${(props) => (props.main ? 'bold' : 'normal')};
 
       &:hover {
         color: #FFF;
       }
+    }
+
+    span {
+      font-size: 11px;
+      font-weight: 300;
+      text-transform: uppercase;
+      line-height: 22px;
+      letter-spacing: 1.11px;
     }
   }
 `;
